@@ -4,9 +4,9 @@ const typeTarget = document.querySelector("#launch-type");
 
 const phrases = [
     "glad you stopped by ( •̀⩊< )",
-    "hope you enjoy your stay!!",
+    "hope you enjoy your stay!",
     "portfolio initializing...",
-    "welcome in..!"
+    "welcome!"
 ];
 
 let width = 0;
