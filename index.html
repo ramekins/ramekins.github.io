@@ -9,12 +9,35 @@
 </head>
 
 <body>
-    <main class="landing">
-        <h1>hi, i'm rami!</h1>
-        <h2>^._.^ฅ</h2>
-        <h3>welcome to my portfolio website...</h3>
-        <p>austin, tx</p>
+    <main class="launch-page">
+        <canvas id="launch-sky" aria-hidden="true"></canvas>
 
-        <a href="about.html">click here!</a>
+        <section class="launch-panel" aria-labelledby="launch-title">
+            <p class="launch-kicker">portfolio loading</p>
+            <h1 id="launch-title">rami l.</h1>
+            <p class="launch-line">
+                <span id="launch-type">soft blue internet corner</span>
+                <span class="type-cursor" aria-hidden="true"></span>
+            </p>
+
+            <div class="launch-orbit" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <p class="launch-copy">
+                a calm little place for projects, experience, and whatever i am building next.
+            </p>
+
+            <a class="launch-button" href="about.html">
+                enter site
+                <span aria-hidden="true">-&gt;</span>
+            </a>
+        </section>
     </main>
+
+    <script src="launch.js"></script>
 </body>
+
+</html>
