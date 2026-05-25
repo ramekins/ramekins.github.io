@@ -3,10 +3,10 @@ const ctx = canvas.getContext("2d");
 const typeTarget = document.querySelector("#launch-type");
 
 const phrases = [
-    "glad you stopped by ",
-    "projects with a calm glow",
-    "portfolio initializing",
-    "welcome in.."
+    "glad you stopped by ( •̀⩊< )",
+    "hope you enjoy your stay!!",
+    "portfolio initializing...",
+    "welcome in..!"
 ];
 
 let width = 0;
