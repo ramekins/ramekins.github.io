@@ -448,15 +448,27 @@ footer {
     background: linear-gradient(90deg, var(--primary), var(--accent), transparent);
 }
 
-.about-hero::after {
-    content: "+";
-    position: absolute;
-    top: 22px;
-    right: 28px;
-    color: rgba(52, 152, 201, 0.38);
-    font-size: 2.6rem;
-    font-weight: 700;
-    line-height: 1;
+.about-photo {
+    float: right;
+    width: min(260px, 36%);
+    margin: -46px 0 18px 28px;
+    padding: 10px;
+    border: 1px solid rgba(52, 152, 201, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 14px 32px rgba(78, 166, 210, 0.16);
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about-badges {
+    clear: both;
 }
 
 .about-page section h2 {
@@ -613,6 +625,12 @@ footer {
 
     .about-page section {
         padding: 22px;
+    }
+
+    .about-photo {
+        float: none;
+        width: min(260px, 100%);
+        margin: 0 0 20px;
     }
 
     .about-focus-grid {
