@@ -314,6 +314,196 @@ footer {
     margin-top: 40px;
 }
 
+/* about page soft launch style */
+.about-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(245, 251, 255, 0.96), rgba(222, 243, 255, 0.86)),
+        linear-gradient(45deg, rgba(241, 247, 255, 0.78), rgba(240, 255, 251, 0.72));
+}
+
+.about-page::before,
+.about-page::after {
+    content: "";
+    position: fixed;
+    inset: 22px;
+    z-index: -1;
+    border: 1px solid rgba(52, 152, 201, 0.14);
+    pointer-events: none;
+}
+
+.about-page::after {
+    inset: 42px;
+    border-color: rgba(111, 141, 161, 0.1);
+}
+
+.about-page header,
+.about-page section,
+.about-page footer {
+    border: 1px solid rgba(114, 199, 236, 0.32);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+}
+
+.about-page header {
+    width: min(1080px, calc(100% - 40px));
+    margin: 24px auto 0;
+    padding: 34px 20px 26px;
+    border-bottom: 1px solid rgba(114, 199, 236, 0.32);
+}
+
+.about-page header h1 {
+    margin: 0 0 16px;
+    color: #17354a;
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1;
+    letter-spacing: 0;
+    text-shadow: 0 16px 34px rgba(78, 166, 210, 0.16);
+}
+
+.about-page nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.about-page nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: #236888;
+    font-weight: 700;
+    transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.about-page nav a:hover {
+    transform: translateY(-1px);
+    border-color: rgba(52, 152, 201, 0.34);
+    background: rgba(234, 247, 255, 0.86);
+    color: #17435b;
+    text-decoration: none;
+}
+
+.about-main {
+    width: min(1000px, calc(100% - 40px));
+    margin: 34px auto 48px;
+    padding: 0;
+}
+
+.about-page section {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+    padding: 28px;
+}
+
+.about-page section::before {
+    content: "";
+    display: block;
+    width: 92px;
+    height: 2px;
+    margin-bottom: 18px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), transparent);
+}
+
+.about-hero::after {
+    content: "+";
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    color: rgba(52, 152, 201, 0.38);
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.about-page section h2 {
+    margin-top: 0;
+    color: #17354a;
+    line-height: 1.15;
+}
+
+.about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.about-badges span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 13px;
+    border: 1px solid rgba(52, 152, 201, 0.28);
+    border-radius: 999px;
+    background: rgba(234, 247, 255, 0.74);
+    color: #17435b;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.about-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.about-focus-grid article {
+    padding-top: 14px;
+    border-top: 2px solid rgba(114, 199, 236, 0.55);
+}
+
+.about-focus-grid h3 {
+    margin: 0 0 8px;
+    color: #17435b;
+    font-size: 1rem;
+}
+
+.about-focus-grid p {
+    margin: 0;
+    color: #486b82;
+}
+
+.about-next a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    margin: 6px 8px 6px 0;
+    padding: 0 14px;
+    border: 1px solid rgba(52, 152, 201, 0.38);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.64);
+    box-shadow: 0 10px 24px rgba(78, 166, 210, 0.11);
+    color: #17435b;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.about-next a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(52, 152, 201, 0.72);
+    background: rgba(234, 247, 255, 0.92);
+}
+
+.about-page footer {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto 28px;
+    padding: 18px 20px;
+    border-top: 1px solid rgba(114, 199, 236, 0.32);
+    color: var(--muted);
+}
+
 /* make it not break on phones */
 @media (max-width: 700px) {
     nav a {
@@ -345,5 +535,32 @@ footer {
 
     .launch-panel {
         padding: 42px 8px 36px;
+    }
+
+    .about-page::before {
+        inset: 12px;
+    }
+
+    .about-page::after {
+        inset: 24px;
+    }
+
+    .about-page header,
+    .about-main,
+    .about-page footer {
+        width: min(100% - 28px, 1000px);
+    }
+
+    .about-page header {
+        margin-top: 14px;
+        padding: 28px 14px 20px;
+    }
+
+    .about-page section {
+        padding: 22px;
+    }
+
+    .about-focus-grid {
+        grid-template-columns: 1fr;
     }
 }
