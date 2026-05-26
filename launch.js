@@ -66,7 +66,35 @@ function typePhrase() {
     setTimeout(typePhrase, pause);
 }
 
+function initAboutReveals() {
+    const revealItems = document.querySelectorAll(".about-page header, .about-page section, .about-page footer");
+
+    if (!revealItems.length) {
+        return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.16,
+        rootMargin: "0px 0px -70px 0px"
+    });
+
+    revealItems.forEach((item) => observer.observe(item));
+}
+
 window.addEventListener("load", () => {
     initParticleBackground();
+    initAboutReveals();
     typePhrase();
 });
