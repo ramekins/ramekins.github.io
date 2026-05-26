@@ -340,11 +340,14 @@ footer {
 .about-page header,
 .about-page section,
 .about-page footer {
+    opacity: 0;
+    transform: translateY(12px);
     border: 1px solid rgba(114, 199, 236, 0.32);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.72);
     box-shadow: var(--shadow);
     backdrop-filter: blur(18px);
+    animation: about-box-fade 700ms ease forwards;
 }
 
 .about-page header {
@@ -403,6 +406,37 @@ footer {
     overflow: hidden;
     margin-bottom: 24px;
     padding: 28px;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.about-page section:hover {
+    transform: translateY(-2px);
+    border-color: rgba(52, 152, 201, 0.48);
+    box-shadow: 0 18px 42px rgba(78, 166, 210, 0.18);
+}
+
+.about-page header {
+    animation-delay: 80ms;
+}
+
+.about-page section:nth-of-type(1) {
+    animation-delay: 180ms;
+}
+
+.about-page section:nth-of-type(2) {
+    animation-delay: 280ms;
+}
+
+.about-page section:nth-of-type(3) {
+    animation-delay: 380ms;
+}
+
+.about-page section:nth-of-type(4) {
+    animation-delay: 480ms;
+}
+
+.about-page footer {
+    animation-delay: 580ms;
 }
 
 .about-page section::before {
@@ -502,6 +536,27 @@ footer {
     padding: 18px 20px;
     border-top: 1px solid rgba(114, 199, 236, 0.32);
     color: var(--muted);
+}
+
+@keyframes about-box-fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-page header,
+    .about-page section,
+    .about-page footer {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+    .about-page section {
+        transition: none;
+    }
 }
 
 /* make it not break on phones */
