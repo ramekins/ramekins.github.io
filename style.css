@@ -333,6 +333,35 @@ li {
     color: #486b82;
 }
 
+.resume-card p {
+    color: #486b82;
+}
+
+.resume-actions {
+    margin: 24px 0 0;
+}
+
+.resume-actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid rgba(52, 152, 201, 0.38);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.64);
+    box-shadow: 0 10px 24px rgba(78, 166, 210, 0.11);
+    color: #17435b;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.resume-actions a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(52, 152, 201, 0.72);
+    background: rgba(234, 247, 255, 0.92);
+}
+
 .social-bubbles {
     display: flex;
     flex-wrap: wrap;
