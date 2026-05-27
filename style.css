@@ -324,6 +324,72 @@ li {
     margin-bottom: 8px;
 }
 
+.contact-main {
+    max-width: 860px;
+}
+
+.contact-intro p {
+    max-width: none;
+    color: #486b82;
+}
+
+.social-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(18px, 6vw, 48px);
+    margin: 28px auto 0;
+}
+
+.social-bubbles a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(52, 152, 201, 0.34);
+    border-radius: 45% 55% 48% 52% / 56% 45% 55% 44%;
+    background: rgba(234, 247, 255, 0.78);
+    box-shadow: 0 10px 24px rgba(78, 166, 210, 0.12);
+    color: #17435b;
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, border-radius 180ms ease, box-shadow 180ms ease;
+}
+
+.social-bubbles svg,
+.social-bubbles img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-bubbles svg {
+    fill: currentColor;
+}
+
+.social-bubbles img {
+    display: block;
+    opacity: 0.86;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(40%) saturate(877%) hue-rotate(158deg) brightness(92%) contrast(91%);
+}
+
+.social-bubbles a:hover {
+    transform: translateY(-2px);
+    border-radius: 52% 48% 55% 45% / 44% 58% 42% 56%;
+    border-color: rgba(52, 152, 201, 0.72);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 14px 30px rgba(78, 166, 210, 0.18);
+}
+
+.social-bubbles .is-placeholder {
+    border-style: dashed;
+    color: var(--muted);
+}
+
 /* footer */
 footer {
     text-align: center;
