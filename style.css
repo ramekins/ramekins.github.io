@@ -2,6 +2,8 @@
     --bg: #f5fbff;
     --surface: #ffffffcc;
     --surface-blue: #eaf7ff;
+    --box-blue: rgba(222, 243, 255, 0.76);
+    --box-border: rgba(52, 152, 201, 0.32);
     --text: #1f3a4d;
     --muted: #6f8da1;
     --primary: #72c7ec;
@@ -106,9 +108,11 @@ section {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 18px;
-    border: 1px solid black;
+    border: 1px solid var(--box-border);
+    border-radius: 8px;
+    background: var(--box-blue);
     text-decoration: none;
-    color: black;
+    color: #17435b;
 }
 
 /* launch/home page */
@@ -276,7 +280,10 @@ section {
 }
 
 .project-card {
-    border: 1px solid black;
+    border: 1px solid var(--box-border);
+    border-radius: 8px;
+    background: var(--box-blue);
+    box-shadow: var(--shadow);
     padding: 20px;
 }
 
@@ -290,7 +297,10 @@ section {
 
 /* experience page */
 .experience-card {
-    border: 1px solid black;
+    border: 1px solid var(--box-border);
+    border-radius: 8px;
+    background: var(--box-blue);
+    box-shadow: var(--shadow);
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -307,7 +317,10 @@ section {
 }
 
 .hobby-card {
-    border: 1px solid black;
+    border: 1px solid var(--box-border);
+    border-radius: 8px;
+    background: var(--box-blue);
+    box-shadow: var(--shadow);
     padding: 20px;
 }
 
@@ -331,6 +344,17 @@ li {
 .contact-intro p {
     max-width: none;
     color: #486b82;
+}
+
+.contact-intro p a {
+    color: #17435b;
+    font-weight: 700;
+    text-decoration-color: rgba(52, 152, 201, 0.55);
+    text-underline-offset: 3px;
+}
+
+.contact-intro p a:hover {
+    color: #2b7ea9;
 }
 
 .resume-card p {
@@ -362,12 +386,34 @@ li {
     background: rgba(234, 247, 255, 0.92);
 }
 
+.contact-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 30px auto 0;
+}
+
+.contact-link-card {
+    padding: 22px;
+    border: 1px solid var(--box-border);
+    border-radius: 8px;
+    background: var(--box-blue);
+    box-shadow: 0 16px 36px rgba(78, 166, 210, 0.12);
+}
+
+.contact-link-card h3 {
+    margin: 0;
+    color: #17435b;
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
 .social-bubbles {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: clamp(18px, 6vw, 48px);
-    margin: 28px auto 0;
+    gap: clamp(14px, 4vw, 28px);
+    margin: 18px auto 0;
 }
 
 .social-bubbles a {
@@ -427,6 +473,120 @@ footer {
     margin-top: 40px;
 }
 
+.site-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: min(1000px, calc(100% - 40px));
+    max-width: 1000px;
+    margin: 48px auto 28px;
+    padding: 28px 34px;
+    border: 1px solid var(--box-border);
+    border-radius: 8px;
+    background: var(--box-blue);
+    box-shadow: var(--shadow);
+    color: var(--muted);
+    text-align: left;
+    backdrop-filter: blur(18px);
+}
+
+.site-footer > p:not(.footer-credit) {
+    display: none;
+}
+
+.footer-contact-list {
+    display: grid;
+    gap: 8px;
+}
+
+.footer-contact-list a,
+.footer-contact-list span {
+    color: #17435b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-contact-list a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-contact-list a,
+.footer-contact-list span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-list a::before,
+.footer-contact-list span::before {
+    color: var(--primary);
+    flex: 0 0 14px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.footer-contact-list a[href^="https"]::before {
+    content: ">";
+}
+
+.footer-contact-list a[href^="mailto"]::before {
+    content: "@";
+}
+
+.footer-contact-list span::before {
+    content: "";
+    display: none;
+}
+
+.footer-contact-list span img {
+    display: block;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(67%) saturate(651%) hue-rotate(164deg) brightness(96%) contrast(91%);
+}
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(18px, 5vw, 42px);
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-2px);
+    background: rgba(234, 247, 255, 0.86);
+}
+
+.footer-socials img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(40%) saturate(877%) hue-rotate(158deg) brightness(92%) contrast(91%);
+}
+
+.footer-credit {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
 /* about page soft launch style */
 .about-page {
     min-height: 100vh;
@@ -455,9 +615,9 @@ footer {
 .about-page footer {
     opacity: 0;
     transform: translateY(12px);
-    border: 1px solid rgba(114, 199, 236, 0.32);
+    border: 1px solid var(--box-border);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.72);
+    background: var(--box-blue);
     box-shadow: var(--shadow);
     backdrop-filter: blur(18px);
     transition: opacity 700ms ease, transform 700ms ease, border-color 180ms ease, box-shadow 180ms ease;
@@ -546,9 +706,9 @@ footer {
     width: min(260px, 36%);
     margin: -46px 0 18px 28px;
     padding: 10px;
-    border: 1px solid rgba(52, 152, 201, 0.3);
+    border: 1px solid var(--box-border);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.72);
+    background: var(--box-blue);
     box-shadow: 0 14px 32px rgba(78, 166, 210, 0.16);
 }
 
@@ -643,6 +803,14 @@ footer {
     color: var(--muted);
 }
 
+.about-page .site-footer {
+    margin: 0 auto 28px;
+    padding: 28px 34px;
+    border: 1px solid var(--box-border);
+    background: var(--box-blue);
+    color: var(--muted);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .about-page header,
     .about-page section,
@@ -721,5 +889,20 @@ footer {
 
     .about-focus-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer,
+    .about-page .site-footer {
+        width: min(100% - 28px, 1000px);
+        padding: 24px 20px;
+    }
+
+    .footer-socials {
+        justify-content: flex-start;
+        gap: 14px;
     }
 }
