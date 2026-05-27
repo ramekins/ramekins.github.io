@@ -3,8 +3,8 @@ const typeTarget = document.querySelector("#launch-type");
 const phrases = [
     "glad you stopped by (˵ •̀ ᴗ - ˵)",
     "hope you enjoy your stay!",
-    "portfolio initializing...",
-    "welcome!"
+    "one moment please..",
+    "your user experience is ready!"
 ];
 
 let phraseIndex = 0;
