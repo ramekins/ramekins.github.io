@@ -613,17 +613,146 @@ section {
 }
 
 /* experience page */
-.experience-card {
+.experience-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(245, 251, 255, 0.96), rgba(222, 243, 255, 0.86)),
+        linear-gradient(45deg, rgba(241, 247, 255, 0.78), rgba(240, 255, 251, 0.72));
+}
+
+.experience-page::before,
+.experience-page::after {
+    content: "";
+    position: fixed;
+    inset: 22px;
+    z-index: -1;
+    border: 1px solid rgba(52, 152, 201, 0.14);
+    pointer-events: none;
+}
+
+.experience-page::after {
+    inset: 42px;
+    border-color: rgba(111, 141, 161, 0.1);
+}
+
+.experience-page header,
+.experience-section,
+.experience-card,
+.experience-page footer {
     border: 1px solid var(--box-border);
     border-radius: 8px;
     background: var(--box-blue);
     box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+}
+
+.experience-page header {
+    width: min(1080px, calc(100% - 40px));
+    margin: 24px auto 0;
+    padding: 34px 20px 26px;
+    border-bottom: 1px solid rgba(114, 199, 236, 0.32);
+    overflow: visible;
+}
+
+.experience-page header h1 {
+    margin: 0 0 16px;
+    color: #17354a;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+    text-shadow: 0 16px 34px rgba(78, 166, 210, 0.16);
+}
+
+.experience-page nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.experience-page nav a,
+.experience-page .nav-more summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: #236888;
+    font-weight: 600;
+    transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.experience-page nav a:hover,
+.experience-page .nav-more summary:hover,
+.experience-page .nav-more[open] summary {
+    transform: translateY(-1px);
+    border-color: rgba(52, 152, 201, 0.34);
+    background: rgba(234, 247, 255, 0.86);
+    color: #17435b;
+    text-decoration: none;
+}
+
+.experience-main {
+    width: min(1000px, calc(100% - 40px));
+    max-width: none;
+    margin: 34px auto 48px;
+    padding: 0;
+}
+
+.experience-section {
+    margin-bottom: 24px;
+    padding: 28px;
+}
+
+.experience-section > h2 {
+    margin-top: 0;
+    color: #17354a;
+    line-height: 1.15;
+}
+
+.experience-section::before {
+    content: "";
+    display: block;
+    width: 92px;
+    height: 2px;
+    margin-bottom: 18px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), transparent);
+}
+
+.experience-card {
     padding: 20px;
     margin-bottom: 20px;
+    background: rgba(234, 247, 255, 0.56);
+    box-shadow: 0 12px 28px rgba(78, 166, 210, 0.1);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.experience-card:last-child {
+    margin-bottom: 0;
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(52, 152, 201, 0.48);
+    box-shadow: 0 18px 38px rgba(78, 166, 210, 0.16);
 }
 
 .experience-card h3 {
     margin-top: 0;
+    color: #17435b;
+}
+
+.experience-card p,
+.experience-card li {
+    color: #486b82;
+}
+
+.experience-card strong {
+    color: #17435b;
 }
 
 /* hobbies page */
@@ -1159,6 +1288,15 @@ footer {
     color: var(--muted);
 }
 
+.experience-page .site-footer {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto 28px;
+    padding: 28px 34px;
+    border: 1px solid var(--box-border);
+    background: var(--box-blue);
+    color: var(--muted);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .about-page header,
     .about-page section,
@@ -1252,17 +1390,25 @@ footer {
     .about-page footer,
     .projects-page header,
     .projects-main,
-    .projects-page footer {
+    .projects-page footer,
+    .experience-page header,
+    .experience-main,
+    .experience-page footer {
         width: min(100% - 28px, 1000px);
     }
 
     .about-page header,
-    .projects-page header {
+    .projects-page header,
+    .experience-page header {
         margin-top: 14px;
         padding: 28px 14px 20px;
     }
 
     .about-page section {
+        padding: 22px;
+    }
+
+    .experience-section {
         padding: 22px;
     }
 
@@ -1282,7 +1428,8 @@ footer {
 
     .site-footer,
     .about-page .site-footer,
-    .projects-page .site-footer {
+    .projects-page .site-footer,
+    .experience-page .site-footer {
         width: min(100% - 28px, 1000px);
         padding: 24px 20px;
     }
