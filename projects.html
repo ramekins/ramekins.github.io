@@ -24,7 +24,6 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="experience.html">Experience</a>
             <a href="projects.html">Projects</a>
             <a href="resume.html">Resume</a>
             <a href="contact.html">Contact</a>
@@ -50,19 +49,21 @@
 
         <section class="projects-grid">
             <article class="project-card">
-                <div class="project-thumb" aria-label="Thumbnail placeholder">
-                    <span>add image</span>
+                <div class="project-thumb project-thumb-stopwatch">
+                    <img src="images/basys.png" alt="Basys board used for the programmable stopwatch timer project">
                 </div>
 
                 <div class="project-content">
                     <p class="project-type">Digital logic</p>
                     <h2>Programmable Stopwatch/Timer</h2>
-                    <p>Digital logic project using finite state machines, counters, and display control.</p>
+                    <p>Digital Logic Design final project built on a Basys3 FPGA using Verilog RTL, with count-up and
+                        count-down modes, preset loading, start/stop control, reset behavior, and 10 ms timing across
+                        four 7-segment displays.</p>
 
                     <div class="project-tags" aria-label="Project tools">
                         <span>Verilog</span>
-                        <span>FSMs</span>
-                        <span>Digital logic</span>
+                        <span>Basys3 FPGA</span>
+                        <span>HLSM design</span>
                     </div>
 
                     <div class="project-actions">
@@ -72,47 +73,120 @@
             </article>
 
             <article class="project-card">
-                <div class="project-thumb" aria-label="Thumbnail placeholder">
-                    <span><img src="files/basys.png"></span>
+                <div class="project-thumb project-thumb-fifo">
+                    <img src="images/FIFO Buffer.png" alt="FIFO buffer diagram">
                 </div>
 
                 <div class="project-content">
-                    <p class="project-type">Hardware</p>
-                    <h2>Custom Stream Deck</h2>
-                    <p>Personal hardware/software project for building a custom macro pad.</p>
+                    <p class="project-type">Digital design</p>
+                    <h2>Synchronous FIFO Buffer</h2>
+                    <p>SystemVerilog project for a parameterized synchronous FIFO with configurable width/depth,
+                        pointer-based read/write control, full/empty flags, and self-checking verification tests.</p>
 
                     <div class="project-tags" aria-label="Project tools">
-                        <span>Arduino</span>
-                        <span>PCB design</span>
-                        <span>Embedded systems</span>
+                        <span>SystemVerilog</span>
+                        <span>Verilog</span>
+                        <span>Vivado</span>
                     </div>
 
                     <div class="project-actions">
-                        <a href="#">GitHub</a>
                         <a href="#">Details</a>
                     </div>
                 </div>
             </article>
 
             <article class="project-card">
-                <div class="project-thumb" aria-label="Thumbnail placeholder">
-                    <span>add image</span>
+                <div class="project-thumb project-thumb-space-invaders">
+                    <img src="images/space-invaders-monster.webp" alt="Space Invaders pixel alien">
+                </div>
+
+                <div class="project-content">
+                    <p class="project-type">Embedded systems</p>
+                    <h2>Space Invaders Embedded System</h2>
+                    <p>My ECE 319k (Embedded Systems) final project: a Space Invaders game built with switches, an ADC
+                        slide
+                        pot joystick, DAC audio, and an LCD driven by a TI MSPM0 microcontroller.</p>
+
+                    <div class="project-tags" aria-label="Project tools">
+                        <span>C</span>
+                        <span>MSPM0</span>
+                        <span>ADC/DAC</span>
+                        <span>ST7735R</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://www.youtube.com/watch?v=IBDL97NAeMA" target="_blank"
+                            rel="noopener noreferrer">Details</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-thumb project-thumb-fir">
+                    <img src="images/fir-filter-bank.png" alt="Spectrogram from octave-spaced FIR filter bank project">
                 </div>
 
                 <div class="project-content">
                     <p class="project-type">Signal processing</p>
                     <h2>Octave-Spaced FIR Filter Bank</h2>
-                    <p>MATLAB project that decomposes audio into multiple frequency bands.</p>
+                    <p>MATLAB project that decomposes an audio signal into octave-spaced frequency bands and visualizes
+                        the result with spectrogram analysis.</p>
 
                     <div class="project-tags" aria-label="Project tools">
                         <span>MATLAB</span>
                         <span>DSP</span>
-                        <span>Audio</span>
+                        <span>FIR filters</span>
                     </div>
 
                     <div class="project-actions">
-                        <a href="#">GitHub</a>
-                        <a href="#">Details</a>
+                        <a href="files/octave-spaced-fir-filter-banks.pdf">Details</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-thumb project-thumb-audio-image">
+                    <img src="images/audio-image-synthesis.png"
+                        alt="Audio waveform from time-frequency signal synthesis project">
+                </div>
+
+                <div class="project-content">
+                    <p class="project-type">Signal processing</p>
+                    <h2>Audio to Image Signal Synthesis</h2>
+                    <p>Mini-project exploring audio-to-image signal synthesis using a time-frequency representation of
+                        an input signal.</p>
+
+                    <div class="project-tags" aria-label="Project tools">
+                        <span>MATLAB</span>
+                        <span>Audio</span>
+                        <span>Time-frequency</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="files/audio-to-image-signal-synthesis.pdf">Details</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-thumb project-thumb-buck">
+                    <img src="images/pcb.png" alt="Buck converter PCB layout">
+                </div>
+
+                <div class="project-content">
+                    <p class="project-type">Power electronics</p>
+                    <h2>Buck Converter Lab</h2>
+                    <p>EE302 lab project focused on designing a PCB-based power converter that steps an input voltage
+                        down to a lower regulated output.</p>
+
+                    <div class="project-tags" aria-label="Project tools">
+                        <span>KiCad</span>
+                        <span>PCB design</span>
+                        <span>Power conversion</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="files/buck converter details.pdf">Details</a>
                     </div>
                 </div>
             </article>

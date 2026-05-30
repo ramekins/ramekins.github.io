@@ -546,6 +546,37 @@ section {
     object-fit: cover;
 }
 
+.project-thumb-stopwatch img {
+    object-position: center;
+}
+
+.project-thumb-buck img {
+    object-position: center;
+}
+
+.project-thumb-space-invaders {
+    background: rgba(12, 38, 58, 0.9);
+}
+
+.project-thumb-space-invaders img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-thumb-fifo img {
+    object-position: center;
+}
+
+.project-thumb-fir img {
+    object-position: center;
+}
+
+.project-thumb-audio-image img {
+    object-position: center;
+}
+
 .project-content {
     display: flex;
     flex: 1;
