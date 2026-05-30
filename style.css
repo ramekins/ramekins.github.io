@@ -4,12 +4,15 @@
     --bg: #f5fbff;
     --surface: #ffffffcc;
     --surface-blue: #eaf7ff;
-    --box-blue: rgba(222, 243, 255, 0.76);
-    --box-border: rgba(52, 152, 201, 0.32);
+    --box-blue: rgba(207, 237, 255, 0.82);
+    --box-border: rgba(43, 126, 169, 0.36);
     --text: #1f3a4d;
     --muted: #6f8da1;
     --primary: #72c7ec;
     --primary-dark: #3498c9;
+    --header-blue: rgba(137, 207, 244, 0.9);
+    --header-border: rgba(35, 104, 136, 0.44);
+    --header-shadow: 0 18px 42px rgba(43, 126, 169, 0.24);
     --accent: #b9dfff;
     --border: #cfeeff;
     --shadow: 0 12px 30px rgba(78, 166, 210, 0.14);
@@ -70,7 +73,8 @@ body > header {
 header {
     text-align: center;
     padding: 30px 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--header-border);
+    background: var(--header-blue);
 }
 
 header h1 {
@@ -409,7 +413,10 @@ section {
     width: min(1080px, calc(100% - 40px));
     margin: 24px auto 0;
     padding: 34px 20px 26px;
-    border-bottom: 1px solid rgba(114, 199, 236, 0.32);
+    border-color: var(--header-border);
+    border-bottom: 1px solid var(--header-border);
+    background: var(--header-blue);
+    box-shadow: var(--header-shadow);
     overflow: visible;
 }
 
@@ -650,7 +657,10 @@ section {
     width: min(1080px, calc(100% - 40px));
     margin: 24px auto 0;
     padding: 34px 20px 26px;
-    border-bottom: 1px solid rgba(114, 199, 236, 0.32);
+    border-color: var(--header-border);
+    border-bottom: 1px solid var(--header-border);
+    background: var(--header-blue);
+    box-shadow: var(--header-shadow);
     overflow: visible;
 }
 
@@ -1082,7 +1092,10 @@ footer {
     width: min(1080px, calc(100% - 40px));
     margin: 24px auto 0;
     padding: 34px 20px 26px;
-    border-bottom: 1px solid rgba(114, 199, 236, 0.32);
+    border-color: var(--header-border);
+    border-bottom: 1px solid var(--header-border);
+    background: var(--header-blue);
+    box-shadow: var(--header-shadow);
 }
 
 .about-page header h1 {
