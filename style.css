@@ -1,7 +1,7 @@
 :root {
     --font-body: "Nunito", "Aptos", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --font-heading: "Nunito", "Aptos Display", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --bg: #f5fbff;
+    --bg: #dceff8;
     --surface: #ffffffcc;
     --surface-blue: #eaf7ff;
     --box-blue: rgba(207, 237, 255, 0.82);
@@ -10,9 +10,9 @@
     --muted: #6f8da1;
     --primary: #72c7ec;
     --primary-dark: #3498c9;
-    --header-blue: rgba(137, 207, 244, 0.9);
-    --header-border: rgba(35, 104, 136, 0.44);
-    --header-shadow: 0 18px 42px rgba(43, 126, 169, 0.24);
+    --header-blue: rgba(181, 222, 247, 0.88);
+    --header-border: rgba(43, 126, 169, 0.37);
+    --header-shadow: 0 16px 34px rgba(43, 126, 169, 0.18);
     --accent: #b9dfff;
     --border: #cfeeff;
     --shadow: 0 12px 30px rgba(78, 166, 210, 0.14);
@@ -228,8 +228,8 @@ section {
     place-items: center;
     overflow: hidden;
     background:
-        linear-gradient(135deg, rgba(245, 251, 255, 0.95), rgba(221, 243, 255, 0.82)),
-        linear-gradient(45deg, rgba(231, 241, 255, 0.72), rgba(242, 255, 251, 0.72));
+        linear-gradient(135deg, rgba(220, 239, 248, 0.96), rgba(195, 226, 244, 0.86)),
+        linear-gradient(45deg, rgba(209, 226, 242, 0.74), rgba(215, 239, 235, 0.72));
 }
 
 .launch-page .particle-background {
@@ -379,8 +379,8 @@ section {
 .projects-page {
     min-height: 100vh;
     background:
-        linear-gradient(135deg, rgba(245, 251, 255, 0.96), rgba(222, 243, 255, 0.86)),
-        linear-gradient(45deg, rgba(241, 247, 255, 0.78), rgba(240, 255, 251, 0.72));
+        linear-gradient(135deg, rgba(220, 239, 248, 0.96), rgba(195, 226, 244, 0.86)),
+        linear-gradient(45deg, rgba(209, 226, 242, 0.74), rgba(215, 239, 235, 0.72));
 }
 
 .projects-page::before,
@@ -623,8 +623,8 @@ section {
 .experience-page {
     min-height: 100vh;
     background:
-        linear-gradient(135deg, rgba(245, 251, 255, 0.96), rgba(222, 243, 255, 0.86)),
-        linear-gradient(45deg, rgba(241, 247, 255, 0.78), rgba(240, 255, 251, 0.72));
+        linear-gradient(135deg, rgba(220, 239, 248, 0.96), rgba(195, 226, 244, 0.86)),
+        linear-gradient(45deg, rgba(209, 226, 242, 0.74), rgba(215, 239, 235, 0.72));
 }
 
 .experience-page::before,
@@ -1047,8 +1047,8 @@ footer {
 .about-page {
     min-height: 100vh;
     background:
-        linear-gradient(135deg, rgba(245, 251, 255, 0.96), rgba(222, 243, 255, 0.86)),
-        linear-gradient(45deg, rgba(241, 247, 255, 0.78), rgba(240, 255, 251, 0.72));
+        linear-gradient(135deg, rgba(220, 239, 248, 0.96), rgba(195, 226, 244, 0.86)),
+        linear-gradient(45deg, rgba(209, 226, 242, 0.74), rgba(215, 239, 235, 0.72));
 }
 
 .about-page::before,
