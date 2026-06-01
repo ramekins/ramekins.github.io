@@ -408,6 +408,7 @@ section {
 
 .projects-page header,
 .projects-page .projects-intro,
+.projects-page .projects-section,
 .projects-page .project-card,
 .projects-page footer {
     border: 1px solid var(--box-border);
@@ -503,6 +504,28 @@ section {
 .projects-intro p:last-child {
     margin: 0 auto;
     max-width: 720px;
+    color: #486b82;
+}
+
+.projects-section {
+    margin-top: 28px;
+    padding: 24px;
+}
+
+.projects-section-heading {
+    margin: 0 0 16px;
+}
+
+.projects-section-heading h2 {
+    margin: 0;
+    color: #17354a;
+    font-size: clamp(1.45rem, 4vw, 2rem);
+    line-height: 1.1;
+}
+
+.projects-section-description {
+    margin: 8px 0 0;
+    max-width: 760px;
     color: #486b82;
 }
 
@@ -1423,6 +1446,10 @@ footer {
 
     .projects-intro {
         text-align: left;
+    }
+
+    .projects-section {
+        padding: 18px;
     }
 
     .landing h1 {
